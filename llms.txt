@@ -1,0 +1,12 @@
+# Vocabula
+
+> Vocabula is a vocabulary flashcard app for iPhone and iPad, covering Kindergarten through Grade 12. The deck holds 4,241 cards in three subjects — 1,963 English words, 814 Math terms and 1,464 Science terms — with thirteen grades in each subject. Every card is built into the app, so it works offline with no network connection. There is no account and no sign-in, no ads, no analytics and no tracking of any kind: nothing is collected, and the few things the app remembers stay on the device. Ten definitions are free to read; a single payment, which does not renew, unlocks the rest. Requires iOS 17.0 or later.
+
+## Pages
+
+- [Privacy policy](./): The full account of what Vocabula saves on the device, what it does not do, how buying through Apple works, what this means for children, and how to delete everything.
+- [Support](support/): How to use the app, and the questions people ask — restoring a purchase, using it on a second device, why it is not a subscription, why ten cards are free, offline use, what is collected about a child, which grades and subjects are covered, reporting a wrong definition, and deleting your data.
+
+## Contact
+
+- Email: submartingaleoptions+vocabula@gmail.com — one person builds and answers for Vocabula.

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vocabula Support</title>
+<meta name="description" content="Help and answers for Vocabula, a K-12 vocabulary flashcard app for iPhone and iPad. How to use it, how to restore a purchase, and how to reach the developer.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://chiragmirani.github.io/vocabula-pages/support/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%235b3fd1'/%3E%3Cpath%20d='M18%2019L32%2045L46%2019'%20fill='none'%20stroke='%23ffffff'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  /* Colours are named once here and used everywhere below, so light and dark
+     mode only ever need one list changed instead of every rule.
+     This list is the same one the privacy policy uses. The two pages are one
+     site, and a reader moving between them should not notice they moved. */
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e3e3e6;
+    --accent: #5b3fd1;
+    --card: #f6f5fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121214;
+      --text: #ececf0;
+      --muted: #a0a0a8;
+      --rule: #2c2c31;
+      --accent: #a99bf2;
+      --card: #1c1c21;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    /* The system font stack: the page uses whatever font the reader's own
+       phone or computer already has, so nothing is downloaded. */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* 16px of breathing room down each side on a phone, and a column that stops
+     growing on a big screen because very long lines are hard to read. */
+  .wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 2.5rem 16px 4rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.35rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 2.25rem 0 0.6rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* The first heading sits right under the summary box, which already draws a
+     line of its own, so it does not need a second one. */
+  h2.first { border-top: 0; padding-top: 0; margin-top: 2rem; }
+
+  /* Each question. No rule above it: the lines belong to the big sections, and
+     drawing one before every question turned the FAQ into a grid. */
+  h3 {
+    font-size: 1.02rem;
+    line-height: 1.35;
+    margin: 1.6rem 0 0.35rem;
+  }
+
+  p, ul, ol { margin: 0 0 1rem; }
+
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+
+  /* The steps are the one place numbers carry meaning, so they are given room
+     to breathe rather than being squeezed like a bullet list. */
+  ol.steps { padding-left: 1.4rem; }
+  ol.steps > li { margin-bottom: 0.7rem; }
+
+  .sub {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .date {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .summary {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.1rem;
+    margin: 0 0 0.5rem;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* Email addresses should not be the thing that forces the page to scroll
+     sideways on a narrow phone. */
+  .nowrap-safe { overflow-wrap: break-word; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vocabula",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Flashcards",
+  "operatingSystem": "iOS 17.0 or later",
+  "description": "Vocabula is a vocabulary flashcard app for iPhone and iPad covering Kindergarten through Grade 12. It holds 4,241 cards in three subjects — 1,963 English words, 814 Math terms and 1,464 Science terms — with thirteen grades in each subject. Tap a card to see what the word means, tap again for the next word; arrows step back and forward and a Shuffle / A–Z switch changes the order. All 4,241 cards are built into the app, so it works with no internet. There is no account and no sign-in, no ads, no analytics and no tracking. Ten definitions are free to read; one payment, which does not renew, unlocks the rest.",
+  "inLanguage": "en-US",
+  "isFamilyFriendly": true,
+  "educationalUse": "Vocabulary study",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student",
+    "audienceType": "Students in Kindergarten through Grade 12"
+  },
+  "isAccessibleForFree": false,
+  "featureList": [
+    "4,241 flashcards: 1,963 English words, 814 Math terms, 1,464 Science terms",
+    "Kindergarten through Grade 12 — thirteen grades in each subject",
+    "Works with no internet, because every card is built into the app",
+    "Shuffle or A–Z order, and it reopens on the card you left",
+    "No account, no sign-in, no ads, no analytics and no tracking",
+    "Ten free definitions before buying; one payment, not a subscription"
+  ],
+  "permissions": "None",
+  "privacyPolicy": "https://chiragmirani.github.io/vocabula-pages/",
+  "author": {
+    "@type": "Person",
+    "name": "Chirag Mirani"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Chirag Mirani"
+  },
+  "maintainer": {
+    "@type": "Person",
+    "name": "Chirag Mirani",
+    "email": "submartingaleoptions+vocabula@gmail.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Vocabula Support",
+  "url": "https://chiragmirani.github.io/vocabula-pages/support/",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "I paid, but my cards are still locked",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Tap Restore a previous purchase. It is on the unlock screen, and it is also in Settings — the gear in the top right corner — under the card counts. The app asks Apple whether this purchase was made, and unlocks if the answer is yes.</p><p>If it says no purchase was found, the usual reason is that the phone is signed in to a different Apple ID from the one that paid. Check which one it is in the iPhone's own Settings › your name › Media & Purchases, then try Restore again.</p><p>If a child tapped the buy button and the purchase is waiting on a parent's approval, the cards unlock on their own once that approval goes through.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I bought it on my iPhone. Do I pay again on my iPad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>No. One payment covers every device signed in to the same Apple ID. On the second device, tap Restore a previous purchase and it unlocks.</p><p>The purchase is also set up as Family Shareable, so it can reach the people in your Family Sharing group. Apple manages that. On their device, the same Restore button is what brings it in.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>No. It is one payment, once, and it does not renew. There is nothing to cancel and no second charge later. Apple calls this kind of purchase a non-consumable; what it means for you is that you buy it and you keep it.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are only 10 cards free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Because the writing is the thing being sold, and ten definitions is enough to judge whether it is any good. It is a taste, not a free version to study on — calling it anything else would just mean finding out later and feeling tricked.</p><p>What is limited is the meanings, not the app. Before you buy you can still open every subject, every grade and every word, and read all the words themselves. Ten of those words will show you their definition, and you choose which ten by tapping. Going back to one you already opened does not cost another of the ten. Once the ten are used, tapping a card moves on to the next word instead of turning it over, and the banner above the card is how you unlock the rest.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work without internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Yes, entirely. All 4,241 cards are built into the app, so studying works on a plane, in a car, or anywhere with no signal. The internet is needed for exactly two things: making the purchase, and restoring it. Both of those are Apple's screens, not ours.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do you collect about my child?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Nothing. There is no account and no sign-in. There are no ads, no analytics, no crash reporting and no software from any other company inside the app. The app asks for no name, no age and no email address, and it has nowhere to type.</p><p>The app does save a few small notes on the device so it can remember where you were — your subject, your grade, your place in the deck, which of the ten free definitions you opened, and whether the unlock was bought. All of it stays on the device and none of it is sent anywhere. The full list is in the privacy policy.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which grades and subjects are covered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Three subjects, each one running the whole way from Kindergarten to Grade 12 — thirteen grades per subject:</p><ul><li>English — 1,963 words.</li><li>Math — 814 terms.</li><li>Science — 1,464 terms.</li></ul><p>That is 4,241 cards in total. Deck sizes differ by grade, because some grades simply have more vocabulary to carry than others.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A definition looks wrong, or a word is missing",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Please email it to submartingaleoptions+vocabula@gmail.com. Corrections are genuinely welcome — a wrong definition in a children's app is worth fixing quickly, and a reader who spots one is doing everyone a favor.</p><p>There is no way to report it from inside the app. That is deliberate, and worth being straight about: the app opens no links and sends no mail, because it has no internet connection of its own and no way to send anything anywhere. So reporting a problem means coming here, or emailing directly. It is a real inconvenience, and it is the price of the app not being able to phone home.</p><p>In the email, say the word, the subject and the grade it was in. That is enough to find the exact card.</p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I delete my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Delete the app. Touch and hold the Vocabula icon on your Home Screen, choose to remove the app, then choose Delete App. The notes it saved go with it.</p><p>Nothing is held anywhere else. There is no server, no account and no copy of anything of yours, so there is nothing else to ask us to delete.</p><p>The record of your purchase belongs to Apple, not to us, so deleting the app does not undo it. Install Vocabula again and tap Restore a previous purchase to get your cards back without paying twice.</p>"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<main class="wrap">
+
+  <h1>Support</h1>
+  <p class="sub">Vocabula &mdash; vocabulary flashcards for Kindergarten through Grade 12</p>
+  <p class="date">Last updated: 4 October 2026</p>
+
+  <div class="summary">
+    <p><strong>Vocabula is one screen and one tap.</strong> Tap a card to see what
+    the word means, tap again for the next word. All 4,241 cards are already
+    inside the app, so it works with no internet.</p>
+    <p class="nowrap-safe">If something is wrong, or a definition looks off,
+    write to <a href="mailto:submartingaleoptions+vocabula@gmail.com">submartingaleoptions+vocabula@gmail.com</a>.
+    A real person reads it.</p>
+  </div>
+
+  <h2 class="first">How to use it</h2>
+
+  <ol class="steps">
+    <li><strong>Pick a subject</strong> at the top: English, Math or Science.</li>
+    <li><strong>Pick a grade</strong> next to it: Kindergarten through Grade 12.</li>
+    <li><strong>Tap the card.</strong> The word turns over and shows what it
+    means.</li>
+    <li><strong>Tap again</strong> for the next word. Keep tapping to keep
+    going.</li>
+    <li><strong>Use the arrows</strong> under the card to step back and forward,
+    and the <strong>Shuffle</strong> / <strong>A&ndash;Z</strong> switch between
+    them to change the order.</li>
+  </ol>
+
+  <p>That really is all of it. There is no lesson to start, no streak to keep up
+  and no score to beat.</p>
+
+  <p>A few small things worth knowing:</p>
+
+  <ul>
+    <li>Close the app and open it later and you come back to the same subject,
+    the same grade, the same order and the same card.</li>
+    <li>Switching subject or grade starts that new deck at its first card.</li>
+    <li>The small line at the bottom of the card says where you are, like
+    &ldquo;14 of 174&rdquo;. At the last card the deck loops round to the first
+    one, so it never dead-ends.</li>
+    <li>The gear in the top right corner holds the card counts, the restore
+    button, the privacy summary and the version number.</li>
+    <li>Vocabula needs iOS 17 or later. The same app runs on iPhone and
+    iPad.</li>
+  </ul>
+
+  <h2>Questions people ask</h2>
+
+  <h3>I paid, but my cards are still locked</h3>
+
+  <p>Tap <em>Restore a previous purchase</em>. It is on the unlock screen, and
+  it is also in Settings &mdash; the gear in the top right corner &mdash; under
+  the card counts. The app asks Apple whether this purchase was made, and
+  unlocks if the answer is yes.</p>
+
+  <p>If it says no purchase was found, the usual reason is that the phone is
+  signed in to a different Apple ID from the one that paid. Check which one it
+  is in the iPhone's own Settings &rsaquo; your name &rsaquo; Media &amp;
+  Purchases, then try Restore again.</p>
+
+  <p>If a child tapped the buy button and the purchase is waiting on a parent's
+  approval, the cards unlock on their own once that approval goes through.</p>
+
+  <h3>I bought it on my iPhone. Do I pay again on my iPad?</h3>
+
+  <p>No. One payment covers every device signed in to the same Apple ID. On the
+  second device, tap <em>Restore a previous purchase</em> and it unlocks.</p>
+
+  <p>The purchase is also set up as Family Shareable, so it can reach the people
+  in your Family Sharing group. Apple manages that. On their device, the same
+  Restore button is what brings it in.</p>
+
+  <h3>Is it a subscription?</h3>
+
+  <p>No. It is one payment, once, and it does not renew. There is nothing to
+  cancel and no second charge later. Apple calls this kind of purchase a
+  non-consumable; what it means for you is that you buy it and you keep it.</p>
+
+  <h3>Why are only 10 cards free?</h3>
+
+  <p>Because the writing is the thing being sold, and ten definitions is enough
+  to judge whether it is any good. It is a taste, not a free version to study
+  on &mdash; calling it anything else would just mean finding out later and
+  feeling tricked.</p>
+
+  <p>What is limited is the <em>meanings</em>, not the app. Before you buy you
+  can still open every subject, every grade and every word, and read all the
+  words themselves. Ten of those words will show you their definition, and you
+  choose which ten by tapping. Going back to one you already opened does not
+  cost another of the ten. Once the ten are used, tapping a card moves on to the
+  next word instead of turning it over, and the banner above the card is how you
+  unlock the rest.</p>
+
+  <h3>Does it work without internet?</h3>
+
+  <p>Yes, entirely. All 4,241 cards are built into the app, so studying works on
+  a plane, in a car, or anywhere with no signal. The internet is needed for
+  exactly two things: making the purchase, and restoring it. Both of those are
+  Apple's screens, not ours.</p>
+
+  <h3>What do you collect about my child?</h3>
+
+  <p>Nothing. There is no account and no sign-in. There are no ads, no
+  analytics, no crash reporting and no software from any other company inside
+  the app. The app asks for no name, no age and no email address, and it has
+  nowhere to type.</p>
+
+  <p>The app does save a few small notes on the device so it can remember where
+  you were &mdash; your subject, your grade, your place in the deck, which of
+  the ten free definitions you opened, and whether the unlock was bought. All of
+  it stays on the device and none of it is sent anywhere. The full list is in the
+  <a href="../">privacy policy</a>.</p>
+
+  <h3>Which grades and subjects are covered?</h3>
+
+  <p>Three subjects, each one running the whole way from Kindergarten to Grade
+  12 &mdash; thirteen grades per subject:</p>
+
+  <ul>
+    <li><strong>English</strong> &mdash; 1,963 words.</li>
+    <li><strong>Math</strong> &mdash; 814 terms.</li>
+    <li><strong>Science</strong> &mdash; 1,464 terms.</li>
+  </ul>
+
+  <p>That is 4,241 cards in total. Deck sizes differ by grade, because some
+  grades simply have more vocabulary to carry than others.</p>
+
+  <h3>A definition looks wrong, or a word is missing</h3>
+
+  <p>Please email it to
+  <a class="nowrap-safe" href="mailto:submartingaleoptions+vocabula@gmail.com">submartingaleoptions+vocabula@gmail.com</a>.
+  Corrections are genuinely welcome &mdash; a wrong definition in a children's
+  app is worth fixing quickly, and a reader who spots one is doing everyone a
+  favor.</p>
+
+  <p><strong>There is no way to report it from inside the app.</strong> That is
+  deliberate, and worth being straight about: the app opens no links and sends
+  no mail, because it has no internet connection of its own and no way to send
+  anything anywhere. So reporting a problem means coming here, or emailing
+  directly. It is a real inconvenience, and it is the price of the app not being
+  able to phone home.</p>
+
+  <p>In the email, say the word, the subject and the grade it was in. That is
+  enough to find the exact card.</p>
+
+  <h3>How do I delete my data?</h3>
+
+  <p><strong>Delete the app.</strong> Touch and hold the Vocabula icon on your
+  Home Screen, choose to remove the app, then choose Delete App. The notes it
+  saved go with it.</p>
+
+  <p>Nothing is held anywhere else. There is no server, no account and no copy
+  of anything of yours, so there is nothing else to ask us to delete.</p>
+
+  <p>The record of your purchase belongs to Apple, not to us, so deleting the
+  app does not undo it. Install Vocabula again and tap <em>Restore a previous
+  purchase</em> to get your cards back without paying twice.</p>
+
+  <h2>Contact</h2>
+
+  <p class="nowrap-safe">Email
+  <a href="mailto:submartingaleoptions+vocabula@gmail.com">submartingaleoptions+vocabula@gmail.com</a>. One person
+  builds and answers for Vocabula, so replies are written by hand rather than
+  promised by a deadline.</p>
+
+  <p>Four things make a reply useful straight away instead of starting with
+  questions back:</p>
+
+  <ul>
+    <li><strong>Your device</strong> &mdash; iPhone 15, iPad Air, and so on.</li>
+    <li><strong>Your iOS version</strong> &mdash; the iPhone's Settings &rsaquo;
+    General &rsaquo; About &rsaquo; Software Version.</li>
+    <li><strong>The Vocabula version</strong> &mdash; open the gear in the app's
+    top right corner and look under About, next to Version.</li>
+    <li><strong>Which card</strong>, if it is about a word: the word, the subject
+    and the grade.</li>
+  </ul>
+
+  <p>If something looks broken, saying what you tapped just before it happened
+  is more useful than anything else you can add.</p>
+
+  <h2>Privacy</h2>
+
+  <p>Vocabula's privacy policy is the full account of what the app saves and
+  what it does not: <a href="../">read the privacy policy</a>.</p>
+
+  <footer>
+    <p>This page is written in plain HTML with its styling built in. It loads no
+    fonts, no scripts, no images and no files from anywhere else, and it sets no
+    cookies. Reading this page is not tracked either.</p>
+  </footer>
+
+</main>
+</body>
+</html>

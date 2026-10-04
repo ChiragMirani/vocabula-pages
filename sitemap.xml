@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The two real pages, and only those. The 404 page is not content. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://chiragmirani.github.io/vocabula-pages/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://chiragmirani.github.io/vocabula-pages/support/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+</urlset>

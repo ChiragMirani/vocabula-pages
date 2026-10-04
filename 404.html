@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Vocabula</title>
+<meta name="description" content="That Vocabula page does not exist. Links to the privacy policy and the support page.">
+<meta name="color-scheme" content="light dark">
+<!-- A page that is not content should not be offered to a search engine as
+     content, so this one is the only page here that says no. -->
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%235b3fd1'/%3E%3Cpath%20d='M18%2019L32%2045L46%2019'%20fill='none'%20stroke='%23ffffff'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  /* The same colour list the policy and support pages use, so a reader who
+     lands here by accident is still plainly on the same site. */
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e3e3e6;
+    --accent: #5b3fd1;
+    --card: #f6f5fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121214;
+      --text: #ececf0;
+      --muted: #a0a0a8;
+      --rule: #2c2c31;
+      --accent: #a99bf2;
+      --card: #1c1c21;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    /* The system font stack: the page uses whatever font the reader's own
+       phone or computer already has, so nothing is downloaded. */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* 16px of breathing room down each side on a phone, and a column that stops
+     growing on a big screen because very long lines are hard to read. */
+  .wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 2.5rem 16px 4rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.35rem;
+  }
+
+  p, ul { margin: 0 0 1rem; }
+
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+
+  .sub {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .summary {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.1rem;
+    margin: 0 0 1.75rem;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* Email addresses should not be the thing that forces the page to scroll
+     sideways on a narrow phone. */
+  .nowrap-safe { overflow-wrap: break-word; }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <h1>Page not found</h1>
+  <p class="sub">Vocabula &mdash; vocabulary flashcards for Kindergarten through Grade 12</p>
+
+  <div class="summary">
+    <p><strong>There is no page at that address.</strong> This site has two
+    pages, and both are below.</p>
+  </div>
+
+  <ul>
+    <li><a href="/vocabula-pages/">Privacy policy</a> &mdash; what the app
+    saves on your device, and what it does not do.</li>
+    <li><a href="/vocabula-pages/support/">Support</a> &mdash; how to use the
+    app, restoring a purchase, and the questions people ask.</li>
+  </ul>
+
+  <p class="nowrap-safe">If a link sent you here, saying where it was is
+  genuinely useful:
+  <a href="mailto:submartingaleoptions+vocabula@gmail.com">submartingaleoptions+vocabula@gmail.com</a>.</p>
+
+  <footer>
+    <p>This page is written in plain HTML with its styling built in. It loads no
+    fonts, no scripts, no images and no files from anywhere else, and it sets no
+    cookies.</p>
+  </footer>
+
+</main>
+</body>
+</html>

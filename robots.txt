@@ -1,0 +1,6 @@
+# Vocabula — everything here is a public page meant to be read, so everything
+# here may be crawled. There is nothing private on this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://chiragmirani.github.io/vocabula-pages/sitemap.xml
