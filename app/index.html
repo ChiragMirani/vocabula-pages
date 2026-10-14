@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vocabula: K-12 Vocabulary Flashcards for iPhone and iPad</title>
+<meta name="description" content="Vocabula is a vocabulary flashcard app for iPhone and iPad: 4,241 cards in English, Math and Science, Kindergarten through Grade 12. Works offline. No ads, no account, nothing collected. $4.99 on the App Store.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://chiragmirani.github.io/vocabula-pages/app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%235b3fd1'/%3E%3Cpath%20d='M18%2019L32%2045L46%2019'%20fill='none'%20stroke='%23ffffff'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="vocabula-icon-512.jpg">
+<meta name="apple-itunes-app" content="app-id=6819035983">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vocabula">
+<meta property="og:url" content="https://chiragmirani.github.io/vocabula-pages/app/">
+<meta property="og:title" content="Vocabula: K-12 Vocabulary Flashcards">
+<meta property="og:description" content="Vocabula is a vocabulary flashcard app for iPhone and iPad: 4,241 cards in English, Math and Science, Kindergarten through Grade 12. Works offline. No ads, no account, nothing collected. $4.99 on the App Store.">
+<meta property="og:image" content="https://chiragmirani.github.io/vocabula-pages/app/vocabula-icon-512.jpg">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="The Vocabula app icon">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vocabula: K-12 Vocabulary Flashcards">
+<meta name="twitter:description" content="Vocabula is a vocabulary flashcard app for iPhone and iPad: 4,241 cards in English, Math and Science, Kindergarten through Grade 12. Works offline. No ads, no account, nothing collected. $4.99 on the App Store.">
+<meta name="twitter:image" content="https://chiragmirani.github.io/vocabula-pages/app/vocabula-icon-512.jpg">
+<style>
+  /* Colours are named once here and used everywhere below, so light and dark
+     mode only ever need one list changed instead of every rule.
+     This list is the same one the privacy policy uses. The two pages are one
+     site, and a reader moving between them should not notice they moved. */
+  :root {
+    --bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e3e3e6;
+    --accent: #5b3fd1;
+    --card: #f6f5fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121214;
+      --text: #ececf0;
+      --muted: #a0a0a8;
+      --rule: #2c2c31;
+      --accent: #a99bf2;
+      --card: #1c1c21;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    /* The system font stack: the page uses whatever font the reader's own
+       phone or computer already has, so nothing is downloaded. */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* 16px of breathing room down each side on a phone, and a column that stops
+     growing on a big screen because very long lines are hard to read. */
+  .wrap {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 2.5rem 16px 4rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.35rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 2.25rem 0 0.6rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* The first heading sits right under the summary box, which already draws a
+     line of its own, so it does not need a second one. */
+  h2.first { border-top: 0; padding-top: 0; margin-top: 2rem; }
+
+  /* Each question. No rule above it: the lines belong to the big sections, and
+     drawing one before every question turned the FAQ into a grid. */
+  h3 {
+    font-size: 1.02rem;
+    line-height: 1.35;
+    margin: 1.6rem 0 0.35rem;
+  }
+
+  p, ul, ol { margin: 0 0 1rem; }
+
+  ul, ol { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+
+  /* The steps are the one place numbers carry meaning, so they are given room
+     to breathe rather than being squeezed like a bullet list. */
+  ol.steps { padding-left: 1.4rem; }
+  ol.steps > li { margin-bottom: 0.7rem; }
+
+  .sub {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
+  }
+
+  .date {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 1.75rem;
+  }
+
+  .summary {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.1rem;
+    margin: 0 0 0.5rem;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  /* Email addresses should not be the thing that forces the page to scroll
+     sideways on a narrow phone. */
+  .nowrap-safe { overflow-wrap: break-word; }
+
+  /* The App Store button: drawn in HTML, so the page still loads no images. */
+  .store {
+    display: inline-block;
+    background: var(--text);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;
+    margin: 0.5rem 0 0.75rem;
+  }
+  .store:hover, .store:focus { opacity: 0.88; }
+  .price { font-size: 1.05rem; margin: 0 0 0.25rem; }
+  .facts { list-style: none; padding: 0; }
+  .facts li { padding-left: 1.4rem; position: relative; }
+  .facts li::before { content: "\2713"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vocabula: K-12 Vocabulary",
+  "alternateName": "Vocabula",
+  "url": "https://chiragmirani.github.io/vocabula-pages/app/",
+  "image": "https://chiragmirani.github.io/vocabula-pages/app/vocabula-icon-512.jpg",
+  "description": "Vocabula is a vocabulary flashcard app for iPhone and iPad: 4,241 cards in English, Math and Science, Kindergarten through Grade 12. Works offline. No ads, no account, nothing collected. $4.99 on the App Store.",
+  "operatingSystem": "iOS",
+  "softwareRequirements": "iOS 17.0 or later",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Flashcards",
+  "inLanguage": "en-US",
+  "isFamilyFriendly": true,
+  "installUrl": "https://apps.apple.com/us/app/vocabula-k-12-vocabulary/id6819035983",
+  "downloadUrl": "https://apps.apple.com/us/app/vocabula-k-12-vocabulary/id6819035983",
+  "sameAs": ["https://apps.apple.com/us/app/vocabula-k-12-vocabulary/id6819035983"],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "url": "https://apps.apple.com/us/app/vocabula-k-12-vocabulary/id6819035983",
+    "availability": "https://schema.org/InStock"
+  },
+  "featureList": [
+    "4,241 flashcards: 1,963 English words, 814 Math terms, 1,464 Science terms",
+    "Kindergarten through Grade 12, thirteen grades in each subject",
+    "Works with no internet, because every card is built into the app",
+    "No account, no sign-in, no ads, no analytics and no tracking"
+  ],
+  "privacyPolicy": "https://chiragmirani.github.io/vocabula-pages/",
+  "softwareHelp": { "@type": "WebPage", "url": "https://chiragmirani.github.io/vocabula-pages/support/" },
+  "author": { "@type": "Person", "name": "Chirag Mirani" }
+}
+</script>
+</head>
+<body>
+<main class="wrap">
+
+  <h1>Vocabula</h1>
+  <p class="sub">Vocabulary flashcards for English, Math and Science, Kindergarten through Grade 12, on iPhone and iPad.</p>
+
+  <p><a class="store" href="https://apps.apple.com/us/app/vocabula-k-12-vocabulary/id6819035983">Get Vocabula on the App Store</a></p>
+  <!-- PRICE: free download, $4.99 one-time unlock in the app (from Wednesday, October 14, 2026). -->
+  <p class="price"><strong>Free</strong> to download. Ten definitions are open; one $4.99 purchase unlocks every card. No subscription.</p>
+  <p class="date">Requires iOS 17 or later.</p>
+
+  <div class="summary">
+    <p><strong>A term on the front, a plain-English definition on the back,</strong>
+    written for a student in the grade that card belongs to. Tap to see the
+    meaning, tap again for the next word.</p>
+  </div>
+
+  <h2 class="first">What is inside</h2>
+  <ul>
+    <li><strong>English</strong> &mdash; 1,963 words.</li>
+    <li><strong>Science</strong> &mdash; 1,464 terms.</li>
+    <li><strong>Math</strong> &mdash; 814 terms, the language of the problem rather than the arithmetic.</li>
+  </ul>
+  <p>Thirteen grades in each subject, 4,241 cards in total. Pick the subject,
+  pick the grade, and study that deck.</p>
+
+  <h2>What it does not do</h2>
+  <ul class="facts">
+    <li>No quizzes, scores, streaks or badges.</li>
+    <li>No account and no sign-in.</li>
+    <li>No ads, no analytics and no tracking. The App Store privacy label reads Data Not Collected.</li>
+    <li>No internet needed to study: every card is built into the app.</li>
+  </ul>
+
+  <h2>More</h2>
+  <ul>
+    <li><a href="https://apps.apple.com/us/app/vocabula-k-12-vocabulary/id6819035983">Vocabula on the App Store</a></li>
+    <li><a href="../support/">Support and common questions</a></li>
+    <li><a href="../">Privacy policy</a></li>
+  </ul>
+
+  <footer>
+    <p>Independent study app. Not affiliated with any school district, publisher,
+    standards body or testing organization. Questions:
+    <a class="nowrap-safe" href="mailto:submartingaleoptions+vocabula@gmail.com">submartingaleoptions+vocabula@gmail.com</a>.</p>
+  </footer>
+
+</main>
+</body>
+</html>
