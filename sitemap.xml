@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- The three real pages, and only those. The 404 page is not content. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://chiragmirani.github.io/vocabula-pages/</loc>
@@ -11,6 +10,6 @@
   </url>
   <url>
     <loc>https://chiragmirani.github.io/vocabula-pages/app/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-11-07</lastmod>
   </url>
 </urlset>
